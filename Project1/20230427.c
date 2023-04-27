@@ -220,6 +220,6 @@ int main()
 
 	printf("기대 수명 : %d살 %d일 %d시 %d분\n", year2, day2, hour2, minute2);
 
-
+	
 	return 0;
 }
