@@ -51,19 +51,53 @@ int main()
 	printf("큰값: %d\n", (a > b) ? a : b);*/
 
 
-// #6 Q1.
+// #6
 /*
 Q1. 사용자로부터 정수 3개를 입력 받아 각 a,b,c에 저장을 하고 조건연산자를 이용하여 
 	이 변수들 중에 가장 큰 값을 구해 출력하는 프로그램을 작성하라.
 */
-	int a, b, c, res;
+	
+	/*int a, b, c, res;
 
 	printf("정수 3개를 입력하시오 : ");
 	scanf("%d %d %d", &a, &b, &c);
 	
 	res = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
 
-	printf("이 변수들 중 가장 큰 값은 : %d\n", res);
+	printf("이 변수들 중 가장 큰 값은 : %d\n", res);*/
+
+
+// #7 비트 연산자
+
+	//int a = 10, b = 12;
+	//
+	//printf("a & b : %d\n", a & b); // 8
+	//printf("a ^ b : %d\n", a ^ b); // 6
+	//printf("a | b : %d\n", a | b); // 14
+	//printf("~a : %d\n", ~a); // -11
+	//printf("a << 1 : %d\n", a << 1); // 20
+	//printf("a >> 2 : %d\n", a >> 2); // 2
+
+
+// #8 조건문
+
+	int a = 0, b = 0;
+
+	if (a > 0)
+	{
+		b = 1;
+	}
+	else if (a == 0)
+	{
+		b = 2;
+	}
+	else
+	{
+		b = 3;
+	}
+	
+	printf("b: %d\n", b);
+
 
 
 
