@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS   // scanf warning을 없애주기 위한 정의
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
