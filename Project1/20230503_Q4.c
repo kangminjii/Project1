@@ -31,7 +31,7 @@ int main()
 
 int abs(int number)
 {
-	if (number < 0)	return number *= -1; // 대입(=)보다 바로 return해주는 것이 runtime이 최적화됨
+	if (number < 0)	return number *= -1; // number *= -1 보다 바로 return해주는 것이 runtime이 최적화됨
 
 	return number;
 }

@@ -7,7 +7,7 @@ int main()
 Q1. p.177 실전 예제
 */
 
-	/*int number, count, countS = 0;
+	int number, count, countS = 0;
 
 	printf("2 이상의 정수를 입력하세요 : ");
 	scanf("%d", &number);
@@ -36,7 +36,7 @@ Q1. p.177 실전 예제
 				countS = 0;
 			}
 		}
-	}*/
+	}
 
 
 /*
@@ -53,7 +53,7 @@ Q2. 다음 식을 만족하는 모든 A와 Z를 구하는 프로그램을 작성하라.
 		9 9
 */
 
-	int n;
+	/*int n;
 	printf("10 미만의 정수 n을 입력하세요 : ");
 	scanf("%d", &n);
 
@@ -67,7 +67,7 @@ Q2. 다음 식을 만족하는 모든 A와 Z를 구하는 프로그램을 작성하라.
 				printf("A = %d, Z = %d\n", i, j);
 			}
 		}
-	}
+	}*/
 
 
 	return 0;
