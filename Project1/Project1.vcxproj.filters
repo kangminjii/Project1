@@ -60,5 +60,26 @@
     <ClCompile Include="20230504_Q5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="연습_map.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230505_배열과 포인터.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230505_Q1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230505_Q2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230505_Q3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230505_버퍼.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230505_Q4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

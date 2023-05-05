@@ -13,7 +13,7 @@ int main()
 	int count1 = 0, count2 = 0;
 
 	puts("case 1 문장 입력 : ");
-	gets(str);
+	gets(str);	// gets 함수는 빈칸을 포함하여 한 줄 전체를 문자열로 입력한다
 
 	int size = sizeof(str) / sizeof(str[0]);
 
