@@ -19,8 +19,8 @@ int main()
 	printf("N의 값을 입력하시오 : ");
 	scanf("%d", &N);
 
-	int row = 0, col = 0;
-	int sum = 0;
+	int row = 0, sum = 0;
+
 	int count = 1;
 	
 	// (row, col)
@@ -28,33 +28,29 @@ int main()
 
 	while (sum <= N - 1 + N - 1)	// sum이 마지막 배열 값이 될 때까지
 	{
-			if (sum % 2 == 1)
+		if (sum % 2 == 1)
+		{
+			for (int row = 0; row <= sum; row++)
 			{
-				for (int row = 0; row <= sum; row++)
-				{
-					for (int col = sum; col >= 0; col--)
-					{
-						if (row >= N || col >= N)	continue; // sum값이 커짐에 따라 count가 커지는 것을 방지
-															  // ex) N = 4, array[0][4] = count --> N X N 배열을 초과하는 부분에 count 값이 들어감
-						if ((row + col) != sum)	continue;
-						array[row][col] = count;
-						count++;
-					}
-				}
+				int col = sum - row;
+
+				if (row >= N || col >= N)	continue;	// sum값이 커짐에 따라 count가 커지는 것을 방지
+														// ex) N = 4, array[0][4] = count --> N X N 배열을 초과하는 부분에 count 값이 들어감
+				array[row][col] = count;
+				count++;
 			}
-			else
+		}
+		else
+		{
+			for (int row = sum; row >= 0; row--)
 			{
-				for (int row = sum; row >= 0; row--)
-				{
-					for (int col = 0; col <= sum; col++)
-					{
-						if (row >= N || col >= N)	continue;
-						if ((row + col) != sum)	continue;
-						array[row][col] = count;
-						count++;
-					}
-				}
+				int col = sum - row;
+
+				if (row >= N || col >= N)	continue;
+				array[row][col] = count;
+				count++;
 			}
+		}
 
 		sum++;
 	}

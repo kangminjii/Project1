@@ -23,31 +23,29 @@ int main()
 	int i = 0, j = 0;
 	int count = 1;
 
-	for (int k = 0; k <= M / 2 - 1; k++)
+	for (int rotate = 0; rotate <= M / 2 - 1; rotate++)  // 시계 방향으로 돌 때마다 움직이는 거리가 변함을 의미하는 변수
 	{
-		for (int j = k; j < M - 1 - k; j++) // right
+		for (int j = rotate; j < M - 1 - rotate; j++) // right
 		{
-			array[k][j] = count;
+			array[rotate][j] = count;  // 행 고정, 열 ++
 			count++;
 		}
 
-		for (int i = k; i < M - 1 - k; i++) // down
+		for (int i = rotate; i < M - 1 - rotate; i++) // down
 		{
-			array[i][M - 1 - k] = count;
+			array[i][M - 1 - rotate] = count;  // 행 ++, 열 고정
 			count++;
 		}
 
-		for (int j = M - 1 - k; j > k; j--) // left
+		for (int j = M - 1 - rotate; j > rotate; j--) // left
 		{
-			array[M - 1 - k][j] = count;
+			array[M - 1 - rotate][j] = count;  // 행 고정, 열 --
 			count++;
 		}
 
-		for (int i = M - 1 - k; i > k; i--) // up
+		for (int i = M - 1 - rotate; i > rotate; i--) // up
 		{
-			if ((k == M / 2) && (M % 2 == 0))	break;
-			
-			array[i][k] = count;
+			array[i][rotate] = count;  // 행 --, 열 고정
 			count++;
 		}
 	}
