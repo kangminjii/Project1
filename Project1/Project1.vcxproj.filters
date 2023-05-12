@@ -108,5 +108,26 @@
     <ClCompile Include="20230510_Q4.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230511_Q1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_이중포인터.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_Q2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_함수포인터.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_Q3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_동적할당.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230511_Q4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
