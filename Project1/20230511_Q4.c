@@ -12,57 +12,58 @@ Q4. 사용자로부터 문자열을 입력 받아서 단어를 역으로 출력하는 프로그램을 작성하라
 
 int main()
 {
-	char input[100] = "";
-	int count = 0;
-
-	printf("입력 > ");
-
-	int length = sizeof(input) / sizeof(input[0]);
-
-	// 입력
-	for (int i = 0; i < length; i++)
+	
+	while (1)
 	{
-		scanf("%c", &input[i]);
-		if (input[i] == '\n')	break;
-		count++;
-	}
+		// 변수 선언
+		char input[100] = "";
+		int index = 0; // 공백일때의 index 값을 space 포인터에 저장
 
-	int index = 0;
+		// 입력
+		printf("입력 > ");
+		gets(input);
+		int length = strlen(input);
 
-	char* space = (char*)calloc(length, sizeof(char));
-
-	for (int i = count; i >= 0; i--)
-	{
-		int index = 0;
-
-		if (input[i] == ' ')
+		// 종료 조건
+		if (strcmp(input, "Quit") == 0)
 		{
-			index = i;
-			*space = &input[i + 1];
-			input[i] = '\0';
-			space++;
+			printf("=========종료=========\n");
+			break;
 		}
 
-		
-	}
+		// 메모리 할당
+		int* space = (int*)malloc(length * 3);
+		// 메모리 할당 실패 알림
+		if (space == NULL)		exit(1);
 
-	printf("출력 > ");
-	int i = index;
-
-	while (i != 0)
-	{
-		for (int i = index; i < length; i++)
+		// 입력 받은 문자열의 뒤에서 부터 검사
+		for (int i = length; i >= 0; i--)
 		{
-			printf("%c", input[i]);
-			if (input[i] == '\0')	break;
+			if (input[i] == ' ' || input[i] == '\0')
+			{
+				space[index] = i;
+				index++;
+			}
 		}
+
+		// 출력
+		printf("출력 > ");
+
+		space[index] = -1;	// 마지막에 입력[0] 부분을 읽기 위한 선언
+
+		for (int i = 0; i < index; i++)
+		{
+			for (int j = space[i + 1] + 1; j < space[i]; j++)
+			{
+				printf("%c", input[j]);
+			}
+			printf(" ");
+		}
+		printf("\n\n");
+
+		free(space);
 	}
 	
-	
-	
-	
-
-	free(space);
 
 
 	return 0;

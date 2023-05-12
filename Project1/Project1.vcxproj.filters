@@ -129,5 +129,29 @@
     <ClCompile Include="20230511_Q4.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230512_동적할당_문자열처리.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_main함수인수.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_Q1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_구조체.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_구조체활용.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_자기참조구조체.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_열거형.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230512_Q2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
