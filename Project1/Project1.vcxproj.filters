@@ -165,5 +165,14 @@
     <ClCompile Include="20230515_Q3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="20230517_main.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230517_input.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="20230517_average.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

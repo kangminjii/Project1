@@ -54,28 +54,27 @@ int main()
 		printf("1 ~ 9 사이의 중복되지 않는 수를 입력하시오\n");
 		printf("%d>  ", count);
 
-		//// 에러 나는중
-		//// 중복 값 입력 방지
-		//for (int i = 0; i < 3; i++)
-		//{
-		//	scanf("%d", &user[i]);
-		//	if (i == 0 || i == 1)
-		//	{
-		//		if (user[i] == user[i + 1])
-		//		{
-		//			restart = 1;
-		//			break;
-		//		}
-		//	}
-		//	if (i == 2)
-		//	{
-		//		if (user[i] == user[i - 2])
-		//		{
-		//			restart = 1;
-		//			break;
-		//		}
-		//	}
-		//}
+		for(int i = 0; i <3; i++)		scanf("%d", &user[i]);
+		for (int i = 0; i < 3; i++)
+		{
+			// 중복 값 입력 방지
+			if (i == 1)
+			{
+				if (user[i] == user[i - 1])
+				{
+					restart = 1;
+					break;
+				}
+			}
+			if (i == 2)
+			{
+				if (user[i] == user[i - 1] || user[i] == user[i - 2])
+				{
+					restart = 1;
+					break;
+				}
+			}
+		}
 
 		// strike, ball 판단
 		for (int i = 0; i < 3; i++)
@@ -110,10 +109,6 @@ int main()
 
 		printf("-------------------\n");
 	}
-	
-
-
-
 
 	return 0;
 }
