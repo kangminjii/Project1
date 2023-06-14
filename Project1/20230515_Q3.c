@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <string.h>\
+#include <string.h>
+#include <Windows.h>
 
 /*
 Q3. 파일 복사 프로그램 만들기
@@ -11,3 +12,51 @@ Q3. 파일 복사 프로그램 만들기
 		원본 파일 : source.txt
 		대상 파일 : dest.txt
 */
+
+int main()
+{
+	FILE* fpr, * fpw;
+	char filename[100], newname[100];
+	int n;
+
+	printf("기존 파일 : ");
+	scanf("%s", &filename);
+	printf("복사된 파일 : ");
+	scanf("%s", &newname);
+	printf("몇 바이트씩 복사하는가? ");
+	scanf("%d", &n);
+
+	fpr = fopen(filename, "rb");
+	if (fpr == NULL)
+	{
+		printf("파일 열기 실패\n");
+		exit(1);
+	}
+	fpw = fopen(newname, "wb");
+	if (fpw == NULL)
+	{
+		printf("파일 쓰기 실패\n");
+		exit(1);
+	}
+
+	fseek(fpr, 0, SEEK_END);
+	int size = ftell(fpr);
+	fseek(fpr, 0, SEEK_SET);
+
+	int* buf = (int*)malloc(n * sizeof(int));
+	int count = 0;
+	while (count <= size)
+	{
+		fread(buf, sizeof(buf), 1, fpr);
+		fwrite(buf, sizeof(buf), 1, fpw);
+		
+		printf("진행도 : %.1f%\n", 100 * (double)count / (double)size);
+		count += n;
+		system("cls");
+	}
+
+	fclose(fpr);
+	fclose(fpw);
+
+	return 0;
+}
